@@ -28,8 +28,12 @@ Go 是为大型代码基础库而设计的语言
 解决方案：对并发的支持非常强大
 
 * 谁在使用Go
+ 
+.image images/google.png _ 75 
+.image images/k8s.png _ 75
+.image images/docker.png _ 75
+.image images/etcd.png _ 75
 
-Google
 
 移动设备的 Chrome SPDY 代理
 Chrome, ChromeOS, Android SDK, Earth 等等的下载服务器
@@ -64,7 +68,9 @@ Go 与 Java 的不同之处
 - 内置泛型映射和数组/片段
 - 内置并发
 
-* Go 特意去掉了大量的特性
+* 比较 Go 和 Java
+
+Go 特意去掉了大量的特性
 
 - 没有类
 - 没有构造器
@@ -74,11 +80,4 @@ Go 与 Java 的不同之处
 - 没有注解
 - 没有自定义泛型
 
-
-* 可视化编辑器
-
-.image images/view.jpg 100 200
-
-- 1.工具栏(Toolbar)
-- 2.聚合构建器(Aggregation Builder)
-- 3.预览画布(Preview Canvas)
+* 示例
