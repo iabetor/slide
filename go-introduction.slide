@@ -1,39 +1,99 @@
-# Title of Talk
+Kibana图表快速构建分享
+地址：http://kibana.occall.com/app/kibana#/dashboard/dashboard
 
-My Name
-9 Mar 2020
-me@example.com
+11 May 2016
 
-## Title of Slide or Section (must begin with ##)
+苏格拉没有底
+http://star.asottt.com
+lihexingstar@163.com
+@star
 
-Some Text
+* ELK介绍
 
-### Subsection {#anchor}
+ELK Stack 是 Elasticsearch、Logstash、Kibana 三个开源软件的组合。在实时数据检索和分析场合，三者通常是配合共用，而且又都先后归于 Elastic.co 公司名下，故有此简称。
 
-- bullets
-- more bullets
-- a bullet continued
-  on the next line
+*Kibana4* 是 Elastic.co 一次崭新的重构产品,前端操作炫丽。Kibana 界面上，只需要点击鼠标，就可以完成搜索、聚合功能，生成炫丽的仪表板。
 
-#### Sub-subsection
 
-Some More text
+* 主要功能
 
-	Preformatted text (code block)
-	is indented (by one tab, or four spaces)
+- Discover
+- Visualize
+- Dashboard
+- Settings
 
-Further Text, including command invocations.
 
-## Section 2: Example formatting {#fmt}
+* Discover
 
-Formatting:
+Discover 标签页用于交互式探索你的数据。你可以访问到匹配得上你选择的索引模式的每个索引的每条记录。你可以提交搜索请求，过滤搜索结果，然后查看文档数据。你还可以看到匹配搜索请求的文档总数，获取字段值的统计情况。如果索引模式配置了时间字段，文档的时序分布情况会在页面顶部以柱状图的形式展示出来。
+.image http://o6yi53w5j.bkt.clouddn.com/Discover.png?imageView2/1/w/700/h/400
 
-_italic_
-// A comment that is completely ignored.
-: Speaker notes.
-**bold**
-`program`
-Markup—_especially italic text_—can easily be overused.
-_Why use scoped\_ptr_? Use plain **\*ptr** instead.
+* Visualize
 
-Visit [the Go home page](https://golang.org/).
+Visualize 标签页用来设计可视化。你可以保存可视化，以后再用，或者加载合并到 dashboard 里(做准备工作)。
+
+- Area chart 区块图
+- Data table 数据表
+- Line chart 折线图
+- Markdown widget 
+- Metric 仪表盘上显示单个数字
+- Pie chart 饼图
+- Tile map 世界地图
+- Vertical bar chart 柱状图
+
+* 可视化编辑器
+
+.image image/VizEditor.jpg
+
+- 1.工具栏(Toolbar)
+- 2.聚合构建器(Aggregation Builder)
+- 3.预览画布(Preview Canvas)
+
+* 详细说一下 聚合构建器
+
+- metrics 在折线图、柱状图中作为Y轴。 在饼图中每个扇形的大小
+- buckets 在折线图、柱状图中作为X轴。 在饼图中扇形的个数
+
+* Y轴 (metrics)
+
+- Count 聚合返回选中索引模式中元素的原始计数。
+- Average 这个聚合返回一个数值字段的 average 。从下拉菜单选择一个字段。
+- Sum 聚合返回一个数值字段的总和。从下拉菜单选择一个字段。
+- Min 聚合返回一个数值字段的最小值。从下拉菜单选择一个字段。
+- Max 聚合返回一个数值字段的最大值。从下拉菜单选择一个字段。
+- Standard Deviation 聚合返回一个数值字段数据的标准差。从下拉菜单选择一个字段。
+- Percentile 聚合返回一个数值字段中值的百分比分布。
+- Percentile Rank 聚合返回一个数值字段中值的百分比分布。
+
+* X轴 (buckets 聚合指明从你的数据集中将要检索什么信息)
+
+- Date Histogram 基于数值字段创建，由时间组织起来。你可以指定时间片的间隔，单位包括秒，分，小时，天，星期，月，年。
+- Histogram 标准 histogram 基于数值字段创建。为这个字段指定一个整数间隔。
+- Range 通过 range 聚合。你可以为一个数值字段指定一系列区间。
+- Terms terms 聚合允许你指定展示一个字段的首尾几个元素，排序方式可以是计数或者其他自定义的metric。
+- Filters 你可以为数据指定一组 filters。你可以用 query string，也可以用 JSON 格式来指定过滤器，就像在 Discover 页的搜索栏里一样。点击 Add Filter 添加下一个过滤器。
+- Significant Terms 展示实验性的 significant terms 聚合的结果。
+
+* 区域图 Area Chart
+
+.image http://o6yi53w5j.bkt.clouddn.com/AreaChart.png?imageView2/1/w/700/h/400
+
+* 数据表格 Data table
+
+.image http://o6yi53w5j.bkt.clouddn.com/dataTable.png?imageView2/1/w/700/h/400
+
+* 折线图 LineChart
+
+.image http://o6yi53w5j.bkt.clouddn.com/lineChart.png?imageView2/1/w/700/h/400
+
+* 饼图 Pie Chart
+
+.image http://o6yi53w5j.bkt.clouddn.com/pieChart.png?imageView2/1/w/700/h/400
+
+* 世界地图 Tile map
+
+.image http://o6yi53w5j.bkt.clouddn.com/tileMap.png?imageView2/1/w/700/h/400
+
+* 柱状图 Bar Chart
+
+.image http://o6yi53w5j.bkt.clouddn.com/barChart.png?imageView2/1/w/700/h/400
