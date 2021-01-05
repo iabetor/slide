@@ -28,11 +28,11 @@ Go 是为大型代码基础库而设计的语言
 解决方案：对并发的支持非常强大
 
 * 谁在使用Go
- 
-.image images/google.png _ 75 
-.image images/k8s.png _ 75
-.image images/docker.png _ 75
-.image images/etcd.png _ 75
+
+.image images/google.png _ 75  
+.image images/k8s.png _ 75 
+.image images/docker.png _ 75 
+.image images/etcd.png _ 75 
 
 
 移动设备的 Chrome SPDY 代理
