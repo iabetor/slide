@@ -1,99 +1,84 @@
-Kibana图表快速构建分享
-地址：http://kibana.occall.com/app/kibana#/dashboard/dashboard
+Go语言入门分享
 
-11 May 2016
+阮从勇
+ruancongyong@gmail.com
 
-苏格拉没有底
-http://star.asottt.com
-lihexingstar@163.com
-@star
+* 主要内容
 
-* ELK介绍
+- Go 是什么，谁在使用 Go？
+- 比较 Go 和 Java
+- 代码示例
+- 并发
+- 工具
 
-ELK Stack 是 Elasticsearch、Logstash、Kibana 三个开源软件的组合。在实时数据检索和分析场合，三者通常是配合共用，而且又都先后归于 Elastic.co 公司名下，故有此简称。
+* Go 是什么？
 
-*Kibana4* 是 Elastic.co 一次崭新的重构产品,前端操作炫丽。Kibana 界面上，只需要点击鼠标，就可以完成搜索、聚合功能，生成炫丽的仪表板。
+Go 是开源的编程语言，可以很简单的构建简单，可靠和高效的软件
+
+Go 是为大型代码基础库而设计的语言
+
+* 为什么有 Go？
+
+解决 Google 规模的一个解决方案
+
+规划的规模为 10⁶⁺ 台机器
+每天在几千台机器上作业
+在系统中与其他作业进行协作，交互
+同一时间进行大量工作
+解决方案：对并发的支持非常强大
+
+* 谁在使用Go
+
+Google
+
+移动设备的 Chrome SPDY 代理
+Chrome, ChromeOS, Android SDK, Earth 等等的下载服务器
+YouTube Vitess MySQL 均衡器
+
+Core OS, Digital Ocean, Docker, Dropbox, Facebook,  GitHub,  Kubernetes, Medium, MongoDB services, Mozilla services, 阿里巴巴, 滴滴出行, 小米, 金山办公...
 
 
-* 主要功能
+* 比较 Go 和 Java
 
-- Discover
-- Visualize
-- Dashboard
-- Settings
+Go 和 Java 有很多共同之处
 
+- C 系列 (强类型，括号)
+- 静态类型
+- 垃圾收集
+- 内存安全 (nil 引用，运行时边界检查)
+- 变量总是初始化 (zero/nil/false)
+- 方法
+- 接口
+- 类型断言 (实例)
+- 反射
 
-* Discover
+* 比较 Go 和 Java
 
-Discover 标签页用于交互式探索你的数据。你可以访问到匹配得上你选择的索引模式的每个索引的每条记录。你可以提交搜索请求，过滤搜索结果，然后查看文档数据。你还可以看到匹配搜索请求的文档总数，获取字段值的统计情况。如果索引模式配置了时间字段，文档的时序分布情况会在页面顶部以柱状图的形式展示出来。
-.image http://o6yi53w5j.bkt.clouddn.com/Discover.png?imageView2/1/w/700/h/400
+Go 与 Java 的不同之处
 
-* Visualize
+- 代码程序直接编译成机器码，没有 VM
+- 静态链接二进制
+- 内存布局控制
+- 函数值和词法闭包
+- 内置字符串 (UTF-8)
+- 内置泛型映射和数组/片段
+- 内置并发
 
-Visualize 标签页用来设计可视化。你可以保存可视化，以后再用，或者加载合并到 dashboard 里(做准备工作)。
+* Go 特意去掉了大量的特性
 
-- Area chart 区块图
-- Data table 数据表
-- Line chart 折线图
-- Markdown widget 
-- Metric 仪表盘上显示单个数字
-- Pie chart 饼图
-- Tile map 世界地图
-- Vertical bar chart 柱状图
+- 没有类
+- 没有构造器
+- 没有继承
+- 没有 final
+- 没有异常
+- 没有注解
+- 没有自定义泛型
+
 
 * 可视化编辑器
 
-.image image/VizEditor.jpg
+.image images/view.jpg 100 200
 
 - 1.工具栏(Toolbar)
 - 2.聚合构建器(Aggregation Builder)
 - 3.预览画布(Preview Canvas)
-
-* 详细说一下 聚合构建器
-
-- metrics 在折线图、柱状图中作为Y轴。 在饼图中每个扇形的大小
-- buckets 在折线图、柱状图中作为X轴。 在饼图中扇形的个数
-
-* Y轴 (metrics)
-
-- Count 聚合返回选中索引模式中元素的原始计数。
-- Average 这个聚合返回一个数值字段的 average 。从下拉菜单选择一个字段。
-- Sum 聚合返回一个数值字段的总和。从下拉菜单选择一个字段。
-- Min 聚合返回一个数值字段的最小值。从下拉菜单选择一个字段。
-- Max 聚合返回一个数值字段的最大值。从下拉菜单选择一个字段。
-- Standard Deviation 聚合返回一个数值字段数据的标准差。从下拉菜单选择一个字段。
-- Percentile 聚合返回一个数值字段中值的百分比分布。
-- Percentile Rank 聚合返回一个数值字段中值的百分比分布。
-
-* X轴 (buckets 聚合指明从你的数据集中将要检索什么信息)
-
-- Date Histogram 基于数值字段创建，由时间组织起来。你可以指定时间片的间隔，单位包括秒，分，小时，天，星期，月，年。
-- Histogram 标准 histogram 基于数值字段创建。为这个字段指定一个整数间隔。
-- Range 通过 range 聚合。你可以为一个数值字段指定一系列区间。
-- Terms terms 聚合允许你指定展示一个字段的首尾几个元素，排序方式可以是计数或者其他自定义的metric。
-- Filters 你可以为数据指定一组 filters。你可以用 query string，也可以用 JSON 格式来指定过滤器，就像在 Discover 页的搜索栏里一样。点击 Add Filter 添加下一个过滤器。
-- Significant Terms 展示实验性的 significant terms 聚合的结果。
-
-* 区域图 Area Chart
-
-.image http://o6yi53w5j.bkt.clouddn.com/AreaChart.png?imageView2/1/w/700/h/400
-
-* 数据表格 Data table
-
-.image http://o6yi53w5j.bkt.clouddn.com/dataTable.png?imageView2/1/w/700/h/400
-
-* 折线图 LineChart
-
-.image http://o6yi53w5j.bkt.clouddn.com/lineChart.png?imageView2/1/w/700/h/400
-
-* 饼图 Pie Chart
-
-.image http://o6yi53w5j.bkt.clouddn.com/pieChart.png?imageView2/1/w/700/h/400
-
-* 世界地图 Tile map
-
-.image http://o6yi53w5j.bkt.clouddn.com/tileMap.png?imageView2/1/w/700/h/400
-
-* 柱状图 Bar Chart
-
-.image http://o6yi53w5j.bkt.clouddn.com/barChart.png?imageView2/1/w/700/h/400
