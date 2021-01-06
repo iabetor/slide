@@ -108,7 +108,7 @@ Go 特意去掉了大量的特性
 
 .play -edit example/sizeof.go /^func main/,/^}/
 
-: Presenter notes
+: 节省内存
 
 * 示例
 
@@ -125,6 +125,15 @@ Go 特意去掉了大量的特性
 并发的基石- *groutinue* 和 *channel*
 
 .play -edit example/concurrent.go /START OMIT/,/END OMIT/
+
+: 利用下标切片
+: go 关键字就可以起一个协程, 并发简单
+
+* 示例
+
+内置web服务
+
+.play -edit example/websrv.go /START OMIT/,/END OMIT/
 
 : 利用下标切片
 : go 关键字就可以起一个协程, 并发简单
