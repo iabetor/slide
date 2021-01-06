@@ -116,4 +116,13 @@ Go 特意去掉了大量的特性
 
 .play -edit example/extends.go /START OMIT/,/END OMIT/
 
+: Go 不是一种典型的OO语言，它在语法上不支持类和继承的概念。
+: 一样可以实现多态
+
+* 示例
+
+并发的基石- *groutinue* 和 *channel*
+
+.play -edit example/concurrent.go /START OMIT/,/END OMIT/
+
 : Presenter notes
