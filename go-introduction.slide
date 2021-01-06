@@ -21,10 +21,9 @@ Go 是为大型代码基础库而设计的语言
 
 互联网的 `C` 语言 
 
-
-: 小巧、简单
-: C 语言风格
-: 语言层面的并发
+: 简洁、快速、安全
+: 并行、有趣、开源
+: 内存管理、数组安全、编译迅速
 
 * 为什么有 Go？
 
@@ -36,7 +35,6 @@ Go 是为大型代码基础库而设计的语言
 同一时间进行大量工作
 —_解决方案：对并发的支持非常强大_—
 
-: Presenter notes (first paragraph)
 
 * 谁在使用Go
 
@@ -48,7 +46,8 @@ Go 是为大型代码基础库而设计的语言
 .image images/didi.png _ 75
 .image images/wps.png _ 75
 
-: Presenter notes (first paragraph)
+: Google 安卓的下载器, SPDY
+: 还有腾讯，七牛，斗鱼等等公司
 
 * 比较 Go 和 Java
 
@@ -64,7 +63,10 @@ Go 和 Java 有很多共同之处
 - 类型断言 (实例)
 - 反射
 
-: Presenter notes (first paragraph)
+: 
+: GC
+: 变量总是初始化为零值 false, 0, "", nil
+: 
 
 * 比较 Go 和 Java
 
@@ -77,8 +79,12 @@ Go 与 Java 的不同之处
 - 内置字符串 (UTF-8)
 - 内置泛型映射和数组/片段
 - 内置并发
+- 有指针有引用
+- 多返回值
 
-: Presenter notes (first paragraph)
+: 调整结构体内字段顺序, 占用内存不一样
+: 不仅有方法, 还有函数, 闭包
+: 切片是引用, 不需要额外内存, 比使用数组更有效率
 
 
 * 比较 Go 和 Java
@@ -93,7 +99,8 @@ Go 特意去掉了大量的特性
 - 没有注解
 - 没有自定义泛型
 
-: Presenter notes (first paragraph)
+: 用error返回或者panic
+: 泛型草案已提出, 大概在Go 2中支持; Java是伪泛型, 编译期间会擦除
 
 * 示例
 
@@ -101,12 +108,12 @@ Go 特意去掉了大量的特性
 
 .play -edit example/sizeof.go /^func main/,/^}/
 
-: Presenter notes (first paragraph)
+: Presenter notes
 
 * 示例
 
 抛弃继承, 使用组合
 
-.play -edit example/sizeof.go /^func main/,/^}/
+.play -edit example/extends.go /START OMIT/,/END OMIT/
 
-: Presenter notes (first paragraph)
+: Presenter notes
