@@ -116,6 +116,7 @@ Go 特意去掉了大量的特性
 
 .play -edit example/extends.go /START OMIT/,/END OMIT/
 
+: 使用内嵌方式
 : Go 不是一种典型的OO语言，它在语法上不支持类和继承的概念。
 : 一样可以实现多态
 
@@ -125,4 +126,5 @@ Go 特意去掉了大量的特性
 
 .play -edit example/concurrent.go /START OMIT/,/END OMIT/
 
-: Presenter notes
+: 利用下标切片
+: go 关键字就可以起一个协程, 并发简单
