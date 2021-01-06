@@ -17,6 +17,8 @@ Go 是开源的编程语言，可以很简单的构建简单，可靠和高效�
 
 Go 是为大型代码基础库而设计的语言
 
+互联网的 `C` 语言 
+
 * 为什么有 Go？
 
 解决 Google 规模的一个解决方案
@@ -25,22 +27,17 @@ Go 是为大型代码基础库而设计的语言
 每天在几千台机器上作业
 在系统中与其他作业进行协作，交互
 同一时间进行大量工作
-解决方案：对并发的支持非常强大
+—_解决方案：对并发的支持非常强大_—
 
 * 谁在使用Go
 
-.image images/google.png _ 75  
+.image images/google.png _ 75
 .image images/k8s.png _ 75 
 .image images/docker.png _ 75 
 .image images/etcd.png _ 75 
-
-
-移动设备的 Chrome SPDY 代理
-Chrome, ChromeOS, Android SDK, Earth 等等的下载服务器
-YouTube Vitess MySQL 均衡器
-
-Core OS, Digital Ocean, Docker, Dropbox, Facebook,  GitHub,  Kubernetes, Medium, MongoDB services, Mozilla services, 阿里巴巴, 滴滴出行, 小米, 金山办公...
-
+.image images/alibaba.png _ 75
+.image images/didi.png _ 75
+.image images/wps.png _ 75
 
 * 比较 Go 和 Java
 
@@ -81,3 +78,7 @@ Go 特意去掉了大量的特性
 - 没有自定义泛型
 
 * 示例
+
+.image images/alibaba.png _ 75
+.image images/didi.png _ 75
+.caption _Gopher_ by [[https://instagram.com/reneefrench][Renee French]]
