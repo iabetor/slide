@@ -79,6 +79,12 @@ Go 特意去掉了大量的特性
 
 * 示例
 
-.image images/alibaba.png _ 75
-.image images/didi.png _ 75
-.caption _Gopher_ by [[https://instagram.com/reneefrench][Renee French]]
+内存布局控制
+
+.play -edit example/sizeof.go /^func main/,/^}/
+
+* 示例
+
+抛弃继承, 使用组合
+
+.play -edit example/sizeof.go /^func main/,/^}/
