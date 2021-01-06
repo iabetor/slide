@@ -3,6 +3,8 @@ Go语言入门分享
 阮从勇
 ruancongyong@gmail.com
 
+: Presenter notes (first paragraph)
+
 * 主要内容
 
 - Go 是什么，谁在使用 Go？
@@ -11,6 +13,8 @@ ruancongyong@gmail.com
 - 并发
 - 工具
 
+: Presenter notes (first paragraph)
+
 * Go 是什么？
 
 Go 是开源的编程语言，可以很简单的构建简单，可靠和高效的软件
@@ -18,6 +22,8 @@ Go 是开源的编程语言，可以很简单的构建简单，可靠和高效�
 Go 是为大型代码基础库而设计的语言
 
 互联网的 `C` 语言 
+
+: Presenter notes (first paragraph)
 
 * 为什么有 Go？
 
@@ -29,6 +35,8 @@ Go 是为大型代码基础库而设计的语言
 同一时间进行大量工作
 —_解决方案：对并发的支持非常强大_—
 
+: Presenter notes (first paragraph)
+
 * 谁在使用Go
 
 .image images/google.png _ 75
@@ -38,6 +46,8 @@ Go 是为大型代码基础库而设计的语言
 .image images/alibaba.png _ 75
 .image images/didi.png _ 75
 .image images/wps.png _ 75
+
+: Presenter notes (first paragraph)
 
 * 比较 Go 和 Java
 
@@ -53,6 +63,8 @@ Go 和 Java 有很多共同之处
 - 类型断言 (实例)
 - 反射
 
+: Presenter notes (first paragraph)
+
 * 比较 Go 和 Java
 
 Go 与 Java 的不同之处
@@ -64,6 +76,8 @@ Go 与 Java 的不同之处
 - 内置字符串 (UTF-8)
 - 内置泛型映射和数组/片段
 - 内置并发
+
+: Presenter notes (first paragraph)
 
 * 比较 Go 和 Java
 
@@ -77,14 +91,20 @@ Go 特意去掉了大量的特性
 - 没有注解
 - 没有自定义泛型
 
+: Presenter notes (first paragraph)
+
 * 示例
 
 内存布局控制
 
 .play -edit example/sizeof.go /^func main/,/^}/
 
+: Presenter notes (first paragraph)
+
 * 示例
 
 抛弃继承, 使用组合
 
 .play -edit example/sizeof.go /^func main/,/^}/
+
+: Presenter notes (first paragraph)
