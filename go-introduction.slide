@@ -3,6 +3,7 @@ Go语言入门分享
 阮从勇
 ruancongyong@gmail.com
 
+
 * 主要内容
 
 - Go 是什么，谁在使用 Go？
@@ -11,9 +12,6 @@ ruancongyong@gmail.com
 - 并发
 - 工具
 
-: 这就是演示者模式
-: 演示
-    : 这是演示者模式1
 
 * Go 是什么？
 
@@ -23,7 +21,10 @@ Go 是为大型代码基础库而设计的语言
 
 互联网的 `C` 语言 
 
-: Presenter notes (first paragraph)
+
+: 小巧、简单
+: C 语言风格
+: 语言层面的并发
 
 * 为什么有 Go？
 
