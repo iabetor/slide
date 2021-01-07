@@ -1,0 +1,23 @@
+// START OMIT
+//hello.c
+#include <stdio.h>
+
+int main() {
+        printf("%s\n", "hello, portable c!");
+        return 0;
+}
+
+//hello.go
+func main() {
+    fmt.Println("hello, portable go!")
+}
+
+$cc -o helloc hello.c
+$go build -o hellogo hello.go
+
+$otool -L helloc
+helloc:
+        /usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1281.0.0)
+$otool -L hellogo
+hellogo:
+// END OMIT
