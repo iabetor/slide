@@ -13,10 +13,10 @@ func sum(s []int, c chan int) {
 
 func main() {
 	s := []int{7, 2, 8, -9, 4, 0}
-	c := make(chan int)
-	go sum(s[:len(s)/2], c) // [7, 2, 8]
-	go sum(s[len(s)/2:], c) // [-9, 4, 0]
-	x, y := <-c, <-c        // receive from c
+	c := make(chan int)     //声明一个通道channel // HL
+	go sum(s[:len(s)/2], c) // [7, 2, 8] // go关键字启动协程 // HL
+	go sum(s[len(s)/2:], c) // [-9, 4, 0] // HL
+	x, y := <-c, <-c        // 从channel接收数据 // HL
 	fmt.Printf("x=%d, y=%d, x+y=%d", x, y, x+y)
 }
 

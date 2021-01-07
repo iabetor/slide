@@ -106,7 +106,9 @@ Go 特意去掉了大量的特性
 
 内存布局控制
 
-.play -edit example/sizeof.go /^func main/,/^}/
+.play -edit example/sizeof.go /^func main/,/^}/ 
+
+同样字段, 调整布局, 占用内存不一样
 
 : 节省内存
 
@@ -114,7 +116,7 @@ Go 特意去掉了大量的特性
 
 抛弃继承, 使用组合
 
-.play -edit example/extends.go /START OMIT/,/END OMIT/
+.play -edit example/extends.go /START OMIT/,/END OMIT/ 
 
 : 使用内嵌方式
 : Go 不是一种典型的OO语言，它在语法上不支持类和继承的概念。

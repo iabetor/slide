@@ -13,12 +13,12 @@ func (*A) Hello(name string) {
 }
 
 type B struct {
-	*A
+	*A // HL
 }
 
-func (*B) Hello(name string) {
-	fmt.Println("hello " + name + ", i am b")
-}
+func (*B) Hello(name string) { // HL
+	fmt.Println("hello " + name + ", i am b") // HL
+} // HL
 func main() {
 	name := "Lee"
 	a := A{}
