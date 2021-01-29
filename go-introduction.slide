@@ -38,15 +38,10 @@ Go 是为大型代码基础库而设计的语言
 
 * 谁在使用Go
 
-.image images/google.png _ 75
-.image images/k8s.png _ 75 
-.image images/docker.png _ 75 
-.image images/etcd.png _ 75 
-.image images/alibaba.png _ 75
-.image images/didi.png _ 75
-.image images/wps.png _ 75
+.html example/enterprise.html
 
 : Google 安卓的下载器, SPDY
+: Facebook也在用，为此他们还专门在Github上建立了一个开源组织facebookgo，大家可以通过https://github.com/facebookgo访问查看facebook开源的项目，比如著名的是平滑升级的grace。
 : 还有腾讯，七牛，斗鱼等等公司
 
 * 比较 Go 和 Java
