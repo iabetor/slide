@@ -43,6 +43,7 @@ Go 是为大型代码基础库而设计的语言
 : Google 安卓的下载器, SPDY
 : Facebook也在用，为此他们还专门在Github上建立了一个开源组织facebookgo，大家可以通过https://github.com/facebookgo访问查看facebook开源的项目，比如著名的是平滑升级的grace。
 : 还有腾讯，七牛，斗鱼等等公司
+: 京东云消息推送系统、云存储，以及京东商城等都有使用Go做开发
 
 * 比较 Go 和 Java
 
